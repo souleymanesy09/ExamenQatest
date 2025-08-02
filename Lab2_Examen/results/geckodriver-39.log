@@ -1,0 +1,19 @@
+1753387149614	geckodriver	INFO	Listening on 127.0.0.1:55488
+1753387150153	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofiler3Wbva"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1753387150837	Marionette	INFO	Marionette enabled
+1753387151172	Marionette	INFO	Listening on port 55498
+Read port: 55498
+WebDriver BiDi listening on ws://127.0.0.1:55489
+1753387151437	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://automationplayground.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://automationplayground.com."
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65, line 205: Script terminated by timeout at:
+tb@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:205:159
+$F@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:724:135
+aG/<@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:724:111
+
+1753387281174	Marionette	INFO	Stopped listening on port 55498
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.

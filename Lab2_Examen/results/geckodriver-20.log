@@ -1,0 +1,12 @@
+1753382298479	geckodriver	INFO	Listening on 127.0.0.1:60522
+1753382298993	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofilebpix2N"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1753382299937	Marionette	INFO	Marionette enabled
+1753382300262	Marionette	INFO	Listening on port 60536
+WebDriver BiDi listening on ws://127.0.0.1:60523
+Read port: 60536
+1753382300560	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1753382311181	Marionette	INFO	Stopped listening on port 60536
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.

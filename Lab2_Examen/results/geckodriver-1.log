@@ -1,0 +1,19 @@
+1753092140634	geckodriver	INFO	Listening on 127.0.0.1:50563
+1753092140652	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofilewPLzvZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1753092141878	Marionette	INFO	Marionette enabled
+1753092142389	Marionette	INFO	Listening on port 50570
+WebDriver BiDi listening on ws://127.0.0.1:50564
+Read port: 50570
+1753092142641	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/sessionstore/SessionStore.sys.mjs, line 4310: TypeError: can't access property "closedGroups", winData is undefined
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65, line 205: Script terminated by timeout at:
+tb@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:205:159
+PF@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:718:135
+QF/<@https://www.googletagmanager.com/gtag/js?id=G-NGEFJL0H65:718:111
+
+JavaScript error: , line 0: NotFoundError: Could not move `/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofilewPLzvZ/bookmarkbackups/bookmarks-2025-07-22_10_V4xp9N5PPrUFnxg0QupyraBtU7Cee5ZZ--FFMNZQnmU=.jsonlz4' to `/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofilewPLzvZ/bookmarkbackups/bookmarks-2025-07-23_10_V4xp9N5PPrUFnxg0QupyraBtU7Cee5ZZ--FFMNZQnmU=.jsonlz4': source file does not exist (NS_ERROR_FILE_NOT_FOUND)
+1753352365315	Marionette	INFO	Stopped listening on port 50570
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.

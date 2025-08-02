@@ -1,0 +1,25 @@
+1753387738522	geckodriver	INFO	Listening on 127.0.0.1:58047
+1753387738541	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" "/Applications/Firefox. ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/8k/yvq1ptxd19d9l22gcvsnsbg80000gn/T/rust_mozprofile9vRNLW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1753387739195	Marionette	INFO	Marionette enabled
+1753387739554	Marionette	INFO	Listening on port 58055
+Read port: 58055
+WebDriver BiDi listening on ws://127.0.0.1:58048
+1753387739822	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://automationplayground.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://automationplayground.com."
+1753387770357	Marionette	INFO	Stopped listening on port 58055
+console.error: "Failed to fetch https://ads.mozilla.org/v1/delete_user:" "NetworkError when attempting to fetch resource."
+console.warn: TopSitesFeed: Failed to fetch data from MARS server: NetworkError when attempting to fetch resource.
+console.error: services.settings: 
+  Message: StorageError: Storage error: AbortError: IndexedDB: security-state/intermediates list() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.
+  Stack:
+    StorageError@resource://services-settings/RemoteSettingsClient.sys.mjs:154:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.sys.mjs:958:14
+maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:846:38
+
+console.warn: services.settings: main/message-groups sync interrupted by shutdown
+console.warn: services.settings: main/nimbus-secure-experiments sync interrupted by shutdown
+console.warn: services.settings: security-state/onecrl sync interrupted by shutdown
+console.error: (new Error("IndexedDB: main/ml-inference-options getLastModified() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.sys.mjs", 16))

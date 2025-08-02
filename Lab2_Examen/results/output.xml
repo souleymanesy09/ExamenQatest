@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on darwin)" generated="2025-07-25T11:15:20.757649" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="/Users/user/Master 1 GL/QA_Test/Lab2_Examen/testcases/login_tests.robot">
+<test id="s1-t1" name="1001 Home Page Should Load" line="10">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:21.051263" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:15:21.050989" elapsed="5.096153"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:15:26.148086" elapsed="0.611679"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:15:26.759992" elapsed="0.000389"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:15:26.760550" elapsed="0.504639"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:21.050194" elapsed="6.215321"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:27.770656" level="INFO">Page title is 'Customer Service'.</msg>
+<arg>Customer Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-07-25T11:15:27.266221" elapsed="0.504637"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:28.287885" level="INFO">Current page contains element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:15:27.771171" elapsed="0.517025"/>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T11:15:28.289648" elapsed="1.390906"/>
+</kw>
+<doc>Ferme le navigateur CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:28.288962" elapsed="1.391862"/>
+</kw>
+<doc>Vérifie que la page d'accueil se charge correctement et contient les éléments attendus.</doc>
+<status status="PASS" start="2025-07-25T11:15:21.049384" elapsed="8.631964"/>
+</test>
+<test id="s1-t2" name="1002 Login Successfully With Valid Credentials" line="17">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:29.683111" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:15:29.682851" elapsed="5.638001"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:15:35.321664" elapsed="1.132036"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:15:36.454024" elapsed="0.000511"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:15:36.454770" elapsed="0.505310"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:29.682554" elapsed="7.278012"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:36.962758" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:36.961358" elapsed="1.329118"/>
+</kw>
+<kw name="Login With Credentials" owner="authentication_page">
+<kw name="Input Email Address" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:38.292588" level="INFO">Typing text 'test@test.com' into text field 'id:email-id'.</msg>
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:38.291895" elapsed="1.558319"/>
+</kw>
+<arg>${email}</arg>
+<doc>Saisit l'adresse email dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:15:38.291537" elapsed="1.558814"/>
+</kw>
+<kw name="Input Password" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:39.851433" level="INFO">Typing text 'test' into text field 'id:password'.</msg>
+<arg>${LoginPageLocators.PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:39.850875" elapsed="1.529505"/>
+</kw>
+<arg>${password}</arg>
+<doc>Saisit le mot de passe dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:15:39.850546" elapsed="1.530060"/>
+</kw>
+<kw name="Click Submit Button" owner="authentication_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:41.382128" level="INFO">Clicking element 'id:submit-id'.</msg>
+<arg>${LoginPageLocators.SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:41.381356" elapsed="1.549164"/>
+</kw>
+<doc>Clique sur le bouton de soumission</doc>
+<status status="PASS" start="2025-07-25T11:15:41.380951" elapsed="1.549890"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/customers.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:15:42.931204" elapsed="0.507358"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Effectue une connexion complète avec email et mot de passe</doc>
+<status status="PASS" start="2025-07-25T11:15:38.290960" elapsed="5.147789"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/customers.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:15:43.439079" elapsed="0.502674"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:44.448140" level="INFO">Page title is 'Customers'.</msg>
+<arg>Customers</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-07-25T11:15:43.942300" elapsed="0.506010"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:45.461738" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
+<arg>Our Happy Customers</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-25T11:15:44.448641" elapsed="1.013377"/>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T11:15:45.463492" elapsed="1.256450"/>
+</kw>
+<doc>Ferme le navigateur CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:45.462938" elapsed="1.257148"/>
+</kw>
+<doc>Teste la connexion réussie avec des identifiants valides.</doc>
+<status status="PASS" start="2025-07-25T11:15:29.681918" elapsed="17.038447"/>
+</test>
+<test id="s1-t3" name="1003 Login Should Fail With Missing Credentials" line="27">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:46.722355" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:15:46.721901" elapsed="5.639101"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:15:52.361843" elapsed="1.091029"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:15:53.453395" elapsed="0.000537"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:15:53.454177" elapsed="0.507174"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:46.721481" elapsed="7.240319"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:53.963848" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:53.962558" elapsed="1.340339"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:55.304385" level="INFO">Clicking element 'id:submit-id'.</msg>
+<arg>${LoginPageLocators.SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:15:55.303503" elapsed="1.257406"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/login.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:15:56.561828" elapsed="0.505216"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:58.083475" level="INFO">Current page contains text 'Login'.</msg>
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-07-25T11:15:57.067399" elapsed="1.016291"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:58.589456" level="INFO">${current_url} = https://automationplayground.com/crm/login.html</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-07-25T11:15:58.084248" elapsed="0.505308"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>/customers.html</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-25T11:15:58.590015" elapsed="0.000434"/>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T11:15:58.591420" elapsed="1.261378"/>
+</kw>
+<doc>Ferme le navigateur CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:58.590951" elapsed="1.262007"/>
+</kw>
+<doc>Teste la connexion échouée lorsque les identifiants sont manquants.</doc>
+<status status="PASS" start="2025-07-25T11:15:46.720753" elapsed="13.132497"/>
+</test>
+<test id="s1-t4" name="1004 Should Be Able To Log Out" line="38">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:15:59.854997" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:15:59.854701" elapsed="5.918909"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:16:05.774473" elapsed="1.092779"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:16:06.867719" elapsed="0.000577"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:16:06.868546" elapsed="0.507729"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:15:59.854328" elapsed="7.522362"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:07.378506" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:07.377251" elapsed="1.330124"/>
+</kw>
+<kw name="Login With Credentials" owner="authentication_page">
+<kw name="Input Email Address" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:08.710471" level="INFO">Typing text 'test@test.com' into text field 'id:email-id'.</msg>
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:08.709540" elapsed="1.562536"/>
+</kw>
+<arg>${email}</arg>
+<doc>Saisit l'adresse email dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:16:08.709009" elapsed="1.563212"/>
+</kw>
+<kw name="Input Password" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:10.273562" level="INFO">Typing text 'test' into text field 'id:password'.</msg>
+<arg>${LoginPageLocators.PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:10.272860" elapsed="1.582809"/>
+</kw>
+<arg>${password}</arg>
+<doc>Saisit le mot de passe dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:16:10.272496" elapsed="1.583481"/>
+</kw>
+<kw name="Click Submit Button" owner="authentication_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:11.857820" level="INFO">Clicking element 'id:submit-id'.</msg>
+<arg>${LoginPageLocators.SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:11.856905" elapsed="1.523227"/>
+</kw>
+<doc>Clique sur le bouton de soumission</doc>
+<status status="PASS" start="2025-07-25T11:16:11.856419" elapsed="1.523937"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/customers.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:13.380643" elapsed="0.508339"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Effectue une connexion complète avec email et mot de passe</doc>
+<status status="PASS" start="2025-07-25T11:16:08.708195" elapsed="5.181116"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/customers.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:13.889928" elapsed="0.506044"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:14.397679" level="INFO">Clicking element 'link:Sign Out'.</msg>
+<arg>${CommonElements.LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:14.396639" elapsed="1.368205"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/sign-out.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:15.765449" elapsed="0.507536"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:16.274200" level="INFO">Clicking element 'link:Customer Service'.</msg>
+<arg>link:Customer Service</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:16.273831" elapsed="1.105243"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/index.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:17.379684" elapsed="0.502994"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:18.389665" level="INFO">Current page contains element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:17.883159" elapsed="0.506818"/>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T11:16:18.391234" elapsed="1.268084"/>
+</kw>
+<doc>Ferme le navigateur CRM</doc>
+<status status="PASS" start="2025-07-25T11:16:18.390726" elapsed="1.268765"/>
+</kw>
+<doc>Vérifie que l'utilisateur peut se déconnecter avec succès.</doc>
+<status status="PASS" start="2025-07-25T11:15:59.853709" elapsed="19.806124"/>
+</test>
+<test id="s1-t5" name="1005 &quot;Remember Me&quot; Checkbox Should Persist Email Address" line="54">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:19.661951" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:16:19.661596" elapsed="5.585967"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:16:25.248454" elapsed="1.088459"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:16:26.337271" elapsed="0.000534"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:16:26.338063" elapsed="0.507481"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:16:19.661184" elapsed="7.184811"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:26.847872" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:26.846600" elapsed="1.328316"/>
+</kw>
+<kw name="Input Email Address" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:28.178154" level="INFO">Typing text 'test@test.com' into text field 'id:email-id'.</msg>
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:28.176198" elapsed="1.562319"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<doc>Saisit l'adresse email dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:16:28.175523" elapsed="1.563153"/>
+</kw>
+<kw name="Input Password" owner="authentication_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:29.740043" level="INFO">Typing text 'test' into text field 'id:password'.</msg>
+<arg>${LoginPageLocators.PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:29.739404" elapsed="1.576777"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Saisit le mot de passe dans le champ correspondant</doc>
+<status status="PASS" start="2025-07-25T11:16:29.739012" elapsed="1.577489"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:31.317977" level="INFO">Selecting checkbox 'id:remember'.</msg>
+<arg>${LoginPageLocators.REMEMBER_ME_CHECKBOX}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:31.316990" elapsed="2.755962"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:34.074604" level="INFO">Clicking element 'id:submit-id'.</msg>
+<arg>${LoginPageLocators.SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:34.073579" elapsed="1.549291"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/customers.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:35.623422" elapsed="0.506516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:36.131274" level="INFO">Clicking element 'link:Sign Out'.</msg>
+<arg>${CommonElements.LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:36.130352" elapsed="1.368065"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/sign-out.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:37.499022" elapsed="0.504884"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:38.004928" level="INFO">Clicking element 'link:Customer Service'.</msg>
+<arg>link:Customer Service</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:38.004559" elapsed="1.111365"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/index.html</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-07-25T11:16:39.116515" elapsed="0.506794"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:39.624852" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:39.623724" elapsed="1.107082"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:40.731576" elapsed="0.506268"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:43.992732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-25T11:16:43.993182" level="FAIL">Value of text field 'id:email-id' should have been 'test@test.com' but was ''.</msg>
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>${VALID_EMAIL}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="FAIL" start="2025-07-25T11:16:41.238503" elapsed="2.768444">Value of text field 'id:email-id' should have been 'test@test.com' but was ''.</status>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<doc>Ferme le navigateur CRM</doc>
+<status status="NOT RUN" start="2025-07-25T11:16:44.007876" elapsed="0.000158"/>
+</kw>
+<doc>Vérifie que l'email est pré-rempli après déconnexion si "Remember Me" est coché.</doc>
+<status status="FAIL" start="2025-07-25T11:16:19.660352" elapsed="24.351172">Value of text field 'id:email-id' should have been 'test@test.com' but was ''.</status>
+</test>
+<test id="s1-t6" name="Verify CRM Login Page Is Displayed After Clicking Sign In" line="75">
+<kw name="Open Browser To CRM Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:44.016556" level="INFO">Opening browser 'Firefox' to base url 'https://automationplayground.com/crm/index.html'.</msg>
+<arg>${CRM_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T11:16:44.016010" elapsed="6.190854"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-25T11:16:50.207560" elapsed="1.088503"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-07-25T11:16:51.296501" elapsed="0.000556"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${TIMEOUT_MEDIUM}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-07-25T11:16:51.297318" elapsed="1.010473"/>
+</kw>
+<doc>Ouvre le navigateur et accède à la page CRM</doc>
+<status status="PASS" start="2025-07-25T11:16:44.015277" elapsed="8.292955"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:52.812778" level="INFO">Page title is 'Customer Service'.</msg>
+<arg>Customer Service</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-07-25T11:16:52.308777" elapsed="0.504334"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:53.330988" level="INFO">Current page contains element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:52.813686" elapsed="0.517573"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:53.332831" level="INFO">Clicking element 'id:SignIn'.</msg>
+<arg>${CommonElements.SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-25T11:16:53.331797" elapsed="1.305268"/>
+</kw>
+<kw name="Verify Login Page Elements Are Displayed" owner="authentication_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LoginPageLocators.EMAIL_FIELD}</arg>
+<arg>timeout=${TIMEOUT_MEDIUM}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:54.638116" elapsed="0.508141"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:55.677753" level="INFO">Current page contains element 'id:password'.</msg>
+<arg>${LoginPageLocators.PASSWORD_FIELD}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:55.146527" elapsed="0.531350"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-07-25T11:16:56.185393" level="INFO">Current page contains element 'id:submit-id'.</msg>
+<arg>${LoginPageLocators.SUBMIT_BUTTON}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-07-25T11:16:55.678141" elapsed="0.507542"/>
+</kw>
+<doc>Vérifie que tous les éléments de la page de login sont visibles</doc>
+<status status="PASS" start="2025-07-25T11:16:54.637722" elapsed="1.548226"/>
+</kw>
+<kw name="Close CRM Browser" owner="common_keywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T11:16:56.186968" elapsed="1.284832"/>
+</kw>
+<doc>Ferme le navigateur CRM</doc>
+<status status="PASS" start="2025-07-25T11:16:56.186477" elapsed="1.285793"/>
+</kw>
+<doc>Vérifie l'affichage correct des éléments de la page de connexion après avoir cliqué sur 'Sign In'.</doc>
+<status status="PASS" start="2025-07-25T11:16:44.013619" elapsed="13.459062"/>
+</test>
+<status status="FAIL" start="2025-07-25T11:15:20.759252" elapsed="96.714351"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="5" fail="1" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

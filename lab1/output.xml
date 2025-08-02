@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-07-31T16:56:02.529411" rpa="false" schemaversion="5">
+<suite id="s1" name="CRUDProducts" source="c:\Users\HP ELITEBOKK\Desktop\lab1\testcases\CRUDProducts.robot">
+<kw name="Initialiser Connexion" owner="keywords" type="SETUP">
+<kw name="Connect To MongoDB" owner="MongoDB">
+<arg>${MONGODB_URI}</arg>
+<arg>${DB_NAME}</arg>
+<status status="PASS" start="2025-07-31T16:56:03.342872" elapsed="0.466918"/>
+</kw>
+<status status="PASS" start="2025-07-31T16:56:03.341244" elapsed="0.469199"/>
+</kw>
+<test id="s1-t1" name="Test Creation Produit Sans Description (Non Passant)" line="32">
+<kw name="Create Product" owner="MongoDB">
+<msg time="2025-07-31T16:56:04.671871" level="FAIL">WriteError: Document failed validation, full error: {'index': 0, 'code': 121, 'errmsg': 'Document failed validation', 'errInfo': {'failingDocumentId': ObjectId('688b8403ef4a8bbe9b555761'), 'details': {'operatorName': '$jsonSchema', 'schemaRulesNotSatisfied': [{'operatorName': 'required', 'specifiedAs': {'required': ['_id', 'category', 'description', 'image', 'price', 'rating', 'title']}, 'missingProperties': ['description']}]}}}</msg>
+<var>${response}</var>
+<arg>${PRODUCT_SANS_DESCRIPTION}</arg>
+<status status="FAIL" start="2025-07-31T16:56:03.813009" elapsed="0.882179">WriteError: Document failed validation, full error: {'index': 0, 'code': 121, 'errmsg': 'Document failed validation', 'errInfo': {'failingDocumentId': ObjectId('688b8403ef4a8bbe9b555761'), 'details': {'operatorName': '$jsonSchema', 'schemaRulesNotSatisfied': [{'operatorName': 'required', 'specifiedAs': {'required': ['_id', 'category', 'description', 'image', 'price', 'rating', 'title']}, 'missingProperties': ['description']}]}}}</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-07-31T16:56:04.697464" elapsed="0.000525"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Test réussi : le produit sans description a bien été rejeté.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-07-31T16:56:04.699939" elapsed="0.000574"/>
+</kw>
+<tag>negatif</tag>
+<tag>produit</tag>
+<status status="FAIL" start="2025-07-31T16:56:03.810837" elapsed="0.892296">WriteError: Document failed validation, full error: {'index': 0, 'code': 121, 'errmsg': 'Document failed validation', 'errInfo': {'failingDocumentId': ObjectId('688b8403ef4a8bbe9b555761'), 'details': {'operatorName': '$jsonSchema', 'schemaRulesNotSatisfied': [{'operatorName': 'required', 'specifiedAs': {'required': ['_id', 'category', 'description', 'image', 'price', 'rating', 'title']}, 'missingProperties': ['description']}]}}}</status>
+</test>
+<kw name="Nettoyer Connexion" owner="keywords" type="TEARDOWN">
+<kw name="Disconnect From MongoDB" owner="MongoDB">
+<status status="PASS" start="2025-07-31T16:56:04.713118" elapsed="0.069482"/>
+</kw>
+<status status="PASS" start="2025-07-31T16:56:04.711544" elapsed="0.071951"/>
+</kw>
+<status status="FAIL" start="2025-07-31T16:56:02.541545" elapsed="2.242427"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">negatif</stat>
+<stat pass="0" fail="1" skip="0">produit</stat>
+</tag>
+<suite>
+<stat name="CRUDProducts" id="s1" pass="0" fail="1" skip="0">CRUDProducts</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-31T16:56:02.602360" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 20: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.603887" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 30: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.605067" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 37: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.606130" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 46: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.607237" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 54: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.608420" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 64: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.610022" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 71: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.611405" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 80: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.613025" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 88: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.614473" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 98: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.615893" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 105: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.617247" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 114: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.618771" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 122: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.620396" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 132: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.622134" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 139: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.623669" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 148: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-07-31T16:56:02.624911" level="WARN">Error in file 'c:\Users\HP ELITEBOKK\Desktop\lab1\ressources\keywords.robot' on line 156: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
