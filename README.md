@@ -1,81 +1,56 @@
-# Mon Projet - Travaux Pratiques
+Mon Projet - Travaux Pratiques
+Ce dépôt contient mes travaux pratiques réalisés dans le cadre du cours [Nom du cours : par exemple, QA et Automatisation des Tests]. Ci-dessous, je présente les détails des différents labos réalisés ainsi que des informations concernant les difficultés rencontrées lors de la réalisation du Labo 3.
 
-Ce dépôt contient mes travaux pratiques réalisés dans le cadre du cours [nom du cours]. Ci-dessous, je présente les détails des différents labos réalisés ainsi que des informations concernant les difficultés rencontrées lors de la réalisation du Labo 3.
+Labo 1 - Tests d'API sur Base de Données MongoDB
+Description : Le Labo 1 portait sur l'automatisation des tests d'API pour une base de données MongoDB. En se basant sur le concept de CRUD (Create, Read, Update, Delete) et sur le schéma d'une API de e-commerce, l'objectif était de valider les fonctionnalités de gestion des données.
 
-## Labo 1 - [Titre du Labo 1]
+Objectifs :
 
-### Description
-Le **Labo 1** porte sur [insérer un bref résumé de ce que le Labo 1 implique, par exemple, une analyse de données, une implémentation d'algorithmes, ou une étude théorique]. 
+Implémenter des tests automatisés avec Robot Framework pour chaque opération CRUD (Create, Read, Update, Delete).
 
-### Objectifs
-- [Énumérer les objectifs du labo]
-- [Expliquer ce qui a été testé ou exploré]
+Couvrir un scénario passant pour chaque opération, c'est-à-dire le bon déroulement de l'action.
 
-### Résultats
-Les résultats du Labo 1 montrent [résumer les résultats obtenus, si applicable, ou les points importants du labo].
+Couvrir au moins un scénario non passant pour chaque opération, par exemple en tentant de lire un élément inexistant ou de supprimer un élément avec un identifiant invalide.
 
-### Conclusion
-[Ajouter une conclusion sur ce que vous avez appris lors de ce labo, si nécessaire.]
+Résultats : Les tests du Labo 1 ont permis de valider que l'API et la base de données gèrent correctement la création, la lecture, la mise à jour et la suppression des entités, tout en retournant les codes d'erreur appropriés pour les cas non passants.
 
----
+Conclusion : Ce labo a permis de se familiariser avec l'automatisation des tests au niveau de la couche API, une pratique essentielle pour garantir la robustesse et la sécurité d'une application avant même l'interface utilisateur.
 
-## Labo 2 - [Titre du Labo 2]
+Labo 2 - Tests Fonctionnels UI avec Robot Framework
+Description : Le Labo 2 a consisté à implémenter une suite de tests fonctionnels pour l'application Web CRM, en se basant sur un cahier de tests existant. L'objectif était de mettre en place de bonnes pratiques d'automatisation en utilisant Robot Framework et SeleniumLibrary.
 
-### Description
-Le **Labo 2** consiste à [bref résumé de ce que vous avez fait dans ce labo]. 
+Objectifs :
 
-### Objectifs
-- [Objectif 1]
-- [Objectif 2]
+Automatiser les scénarios de test pour la fonctionnalité de connexion (succès, échec, "se souvenir de moi").
 
-### Résultats
-Les résultats du Labo 2 sont les suivants :
-- [Exemple de résultats ou de progrès réalisés]
-- [Si applicable, ajouter des graphiques, des tableaux ou des visualisations de données obtenues]
+Automatiser les scénarios de test pour la gestion des clients (affichage du tableau, ajout de nouveau client, annulation de l'ajout).
 
-### Conclusion
-[Votre conclusion sur le labo, ce que vous en avez retiré.]
+Appliquer une structure de projet modulaire (Page Object Model) pour la maintenabilité et la réutilisation du code.
 
----
+Résultats : Les tests ont été implémentés avec succès et sont désormais passants. Un travail important a été réalisé pour identifier et corriger les sélecteurs (locators) d'éléments, ainsi que pour ajuster les mots-clés pour s'adapter aux comportements de l'application (par exemple, la gestion des redirections d'URL).
 
-## Labo 3 - [Titre du Labo 3]
+Conclusion : Ce labo a renforcé la compréhension de l'automatisation de l'interface utilisateur, des bonnes pratiques de structuration de projet, et de l'importance du débogage pour créer des tests fiables.
 
-### Description
-Le **Labo 3** était supposé [insérer l'objectif ou le sujet du Labo 3]. Cependant, j'ai rencontré des problèmes techniques [ou des problèmes de compréhension, de matériel, etc.] qui m'ont empêché de terminer ce travail. En particulier, les difficultés suivantes ont surgi :
-- [Expliquer brièvement les problèmes rencontrés, par exemple des erreurs de code, des problèmes d'installation, etc.]
-- [Autres problèmes spécifiques]
+Labo 3 - Tests d'APIs REST - Intégration avec eBay
+Description : Le Labo 3 était supposé consister en l'automatisation des tests pour l'API Fulfillment d'eBay, en utilisant la RequestsLibrary de Robot Framework pour valider les opérations getOrder, getOrders et issueRefund.
 
-### État actuel
-Le Labo 3 n'a pas été achevé, mais des progrès ont été réalisés dans certaines parties. [Expliquer brièvement ce que vous avez pu faire avant les problèmes.]
+Difficultés rencontrées : Malheureusement, j'ai rencontré un problème bloquant qui m'a empêché de commencer et de terminer ce travail. La principale difficulté résidait dans l'authentification à l'API eBay, qui nécessite un jeton d'accès OAuth 2.0.
 
-### Solutions envisagées
-Je travaille actuellement sur la résolution des problèmes et je prévois de compléter ce laboratoire une fois les difficultés surmontées. 
+État actuel : Le Labo 3 n'a pas été achevé. J'ai pu préparer la structure de base du fichier de test et importer les bibliothèques nécessaires, mais sans un jeton d'authentification valide, il n'était pas possible d'envoyer des requêtes à l'API et de valider les scénarios.
 
----
+Solutions envisagées : Pour progresser, il aurait été nécessaire d'obtenir un jeton d'accès de développement pour l'environnement sandbox d'eBay ou d'adapter les tests pour simuler les réponses de l'API.
 
-## Labo 4 - [Titre du Labo 4]
+Labo 4 - Tests Mobile
 
-### Description
-Le **Labo 4** porte sur [bref résumé de ce que vous avez fait dans ce labo, par exemple, une extension des concepts des labos précédents ou une nouvelle problématique à résoudre].
+Objectifs :
 
-### Objectifs
-- [Objectif 1]
-- [Objectif 2]
+Objectif 1: Se connecter
 
-### Résultats
-Les résultats du Labo 4 montrent [résumer brièvement les résultats obtenus dans ce laboratoire].
+Objectif 2 : creation et affichage d'un produit
 
-### Conclusion
-[Conclusion sur le Labo 4.]
 
----
+Conclusion Générale
+Ce projet représente l'aboutissement des Labos 1, 2, et 4. Le Labo 3 reste en suspens à cause des difficultés d'authentification rencontrées, mais la démarche et la compréhension des tests d'API ont été étudiées.
 
-## Conclusion générale
-
-Ce projet représente l'aboutissement des Labos 1, 2, et 4. Le Labo 3 reste en suspens à cause des difficultés rencontrées, mais je prévois de le compléter prochainement. 
-
----
-
-## Remerciements
-
+Remerciements
 Je tiens à remercier [mentionner des personnes, des ressources, etc.] pour leur aide et leur soutien dans la réalisation de ce projet.
